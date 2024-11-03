@@ -1,6 +1,7 @@
 package br.com.screenmatch.models;
 
 public class Series extends AudioVisualContent {
+
     // Atributos específicos de Series
     private int season;
     private boolean active;
@@ -17,12 +18,12 @@ public class Series extends AudioVisualContent {
     }
 
     // Getters
-    public boolean isActive() {
-        return active;
-    }
-
     public int getSeason() {
         return season;
+    }
+
+    public boolean isActive() {
+        return active;
     }
 
     public int getEpisodesPerSeason() {
@@ -34,12 +35,12 @@ public class Series extends AudioVisualContent {
     }
 
     // Setters
-    public void setActive(boolean active) {
-        this.active = active;
-    }
-
     public void setSeason(int season) {
         this.season = season;
+    }
+
+    public void setActive(boolean active) {
+        this.active = active;
     }
 
     public void setEpisodesPerSeason(int episodesPerSeason) {
@@ -50,6 +51,7 @@ public class Series extends AudioVisualContent {
         this.minutesPerSeason = minutesPerSeason;
     }
 
+    // Métodos sobrescritos
     @Override
     public int getDurationMinutes() {
         return season * episodesPerSeason * minutesPerSeason;
@@ -59,7 +61,7 @@ public class Series extends AudioVisualContent {
     public void displayInformation() {
         super.displayInformation();
         System.out.println("Temporadas: " + season);
-        System.out.println("Ativa: " + active);
+        System.out.println("Série Ativa: " + active);
         System.out.println("Episódios por temporada: " + episodesPerSeason);
         System.out.println("Minutos por episódio: " + minutesPerSeason);
         System.out.println("Duração total em minutos: " + getDurationMinutes());

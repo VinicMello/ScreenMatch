@@ -10,9 +10,6 @@ public abstract class AudioVisualContent {
     private int durationMinutes;
 
     // Construtores
-    public AudioVisualContent() {
-    }
-
     public AudioVisualContent(String name, int yearRelease, boolean includedPlan, int durationMinutes) {
         this.name = name;
         this.yearRelease = yearRelease;
