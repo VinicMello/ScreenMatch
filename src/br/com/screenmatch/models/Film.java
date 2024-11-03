@@ -1,6 +1,8 @@
 package br.com.screenmatch.models;
 
-public class Film extends AudioVisualContent {
+import br.com.screenmatch.calculations.Classification;
+
+public class Film extends AudioVisualContent implements Classification {
 
     private String director;
 
@@ -25,4 +27,10 @@ public class Film extends AudioVisualContent {
         super.displayInformation();
         System.out.println("Diretor: " + director);
     }
+
+    @Override
+    public int getClassification(){
+        return (int) getAverage() / 2;
+    }
+
 }
